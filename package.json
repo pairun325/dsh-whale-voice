@@ -1,0 +1,48 @@
+{
+  "name": "dsh-whale-voice",
+  "version": "0.1.0",
+  "description": "让 DSH 里的鲸鱼娘开口说话：把回复变成屏幕底部的字幕投影，并用系统语音念出来。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "tts",
+    "subtitle",
+    "speech",
+    "sapi",
+    "windows",
+    "accessibility"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "helper/projector.py",
+    "helper/speak.ps1",
+    "helper/sovits_worker.py",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": "githu-mensk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/githu-mensk/dsh-whale-voice.git"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}
